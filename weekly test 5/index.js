@@ -12,9 +12,6 @@ async function getcategories() {
     }
 }
 
-
-
-
 function appendcategories(data) {
     data.forEach((cat) => {
         const li = document.createElement("li");
