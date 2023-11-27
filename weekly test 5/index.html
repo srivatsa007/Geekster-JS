@@ -8,6 +8,7 @@
     <title>Book-App</title>
     <link rel="icon" type="image/x-icon" href="assets/logo-removebg-preview.png" alt="logo">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/9b697ab43f.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="header">
@@ -40,7 +41,11 @@
       </div>
     </main>
 
-    <div class="backdrop" id="backdrop"> <div class="modal-pop"> <button class="modal-pop__button--close" id="close__btn" style="cursor: pointer;" data-modal-pop-close=""> <img  onclick="closefunction()" src="809529-200.png" height="24"width="24"/> </button>  
+    <div class="backdrop" id="backdrop"> <div class="modal-pop"> <button class="modal-pop__button--close" id="close__btn" style="cursor: pointer;" data-modal-pop-close=""> 
+        <!-- <img  onclick="closefunction()" src="809529-200.png" height="24"width="24"/>  -->
+        <i class=" cross fa-solid fa-xmark" style="cursor: pointer ; color: rgb(138, 140, 139);" onclick="closefunction()" height="28"width="28">
+        </i>
+    </button>  
         <div class="modal-pop__container" data-modal="">
       <div class="modal-info">
         <img class="modal-info__image">
