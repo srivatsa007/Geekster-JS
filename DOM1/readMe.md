@@ -1,6 +1,6 @@
 # Dynamic Styling of a Div Element with JavaScript DOM Manipulation
 
-[Live links](https://github.com/
+[Live links](https://srivatsa007.github.io/Geekster-JS/DOM1/)
 
 This project demonstrates how to dynamically manipulate the styling of a `<div>` element using JavaScript's DOM manipulation techniques. The aim is to showcase the alteration of various visual properties to create a more visually appealing user interface.
 
