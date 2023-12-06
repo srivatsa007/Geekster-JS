@@ -1,0 +1,77 @@
+body {
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-weight: bold;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  
+}
+::-webkit-scrollbar{
+  display: none;
+}
+
+#board {
+  width: 500px;
+  height: 500px;
+  border: 10px solid darkgray;
+  background-color: lightgray;
+
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#board div {
+  width: 48px;
+  height: 48px;
+  border: 1px solid whitesmoke;
+
+  /* text */
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-section{
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-clicked {
+  background-color: darkgrey;
+}
+
+/* 1 to 8 adjascent tile numbers */
+.x1 {
+  color: blue;
+}
+
+.x2 {
+  color: green;
+}
+
+.x3 {
+  color: red;
+}
+
+.x4 {
+  color: navy;
+}
+
+.x5 {
+  color: brown;
+}
+
+.x6 {
+  color: teal;
+}
+
+.x7 {
+  color: black;
+}
+
+.x8 {
+  color: gray;
+}

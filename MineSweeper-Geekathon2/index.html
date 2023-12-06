@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Minesweeper</title>
+        <link rel="icon" href="marine.png">
+        <link rel="stylesheet" href="style.css">
+        <!-- <script src="script.js" defer ></script> -->
+    </head>
+
+    <body>
+        <h1> 
+            <span>
+                <img src="marine.png" alt="" height="25" width="25">
+            </span> 
+            Mines: <span id="mines-count">0</span>
+        </h1>
+        <!-- <script>
+            function reloadPage() {
+              location.reload();
+            }
+          </script> -->
+        <div id="board">
+
+        </div>
+        <br>
+        <div class="button-section">
+            <!-- <button id="flag-button">🚩</button> -->
+            <div>Flags left: <span id='flags-left'></span>
+            </div>
+            <button class="reload" type="submit"
+            style="padding: 1rem; border: none; border-radius: 5px; background-color: teal; margin: 1rem 0; cursor: pointer; color: aliceblue; font-weight: 700;" 
+            onclick="reloadPage()"> 
+            ↻ RELOAD GAME
+            </button>
+        </div>
+        
+        <script src="script.js" defer ></script>
+    </body>
+</html>
