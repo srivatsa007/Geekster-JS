@@ -9,3 +9,7 @@ document.addEventListener("keydown", (event) => {
 
   event.preventDefault();
 });
+
+function reloadPage() {
+    location.reload();
+  } 
