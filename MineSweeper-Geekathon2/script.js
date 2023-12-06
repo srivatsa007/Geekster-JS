@@ -17,8 +17,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let minesLocation = []; // Array to store mine locations in the format "row-column"
 
     let tilesClicked = 0; // Counter to track the number of revealed tiles
-    let flagEnabled = false; // Flag mode to place or remove flags
+    // let flagEnabled = false; // Flag mode to place or remove flags
     let gameOver = false; // Flag to track if the game is over
+
+    const flagCount = document.getElementById("flags-count");
+    console.log(flagCount);
+    flagCount.innerText=minesCount;
+    let flags = 0;
 
     // Function to set mines randomly on the board
     function setMines() {
@@ -39,12 +44,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // window.onload = function() { OR this.onload = function(){
     //     startGame();
     // }
-
+    let mcount = document.getElementById("mines-count")
     // Function to start the game
     function startGame() {
         // Display the initial number of mines
-        document.getElementById("mines-count").innerText = minesCount;
-
+        mcount.innerText = minesCount;
+        console.log(mcount);
         // Add event listener to the flag button
         // document.getElementById("flag-button").addEventListener("click", placeFlag);
         // Set mines on the board
@@ -56,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for (let c = 0; c < columns; c++) {
                 // Create a div element for each tile on the board
                 let tile = document.createElement("div");
+
                 tile.id = r.toString() + "-" + c.toString();
                 tile.addEventListener("click", clickTile);
                 
@@ -112,6 +118,8 @@ document.addEventListener("DOMContentLoaded", () => {
 //^^^^^^^^^^^^^^^^^^
 function placeFlag(event) {
     event.preventDefault();
+    for(let f=0; f<20;f++)
+
     console.log(this);
     if (gameOver || this.classList.contains("tile-clicked")) {
       return;
@@ -119,11 +127,20 @@ function placeFlag(event) {
 
     let tile = this;
     
-    if (tile.innerText === "") {
+    if (tile.innerText === "" && (minesCount-flags)>0) 
+    {
       tile.innerText = "🚩";
-    } else if (tile.innerText === "🚩") {
-      tile.innerText = "";
-    }
+      flags++;
+      flagCount.innerText = minesCount - flags;
+      console.log(flagCount.innerText);
+    } 
+    else 
+        if (tile.innerText === "🚩") 
+        {
+            tile.innerText = "";
+            flags--;
+            flagCount.innerText = minesCount - flags;
+        }
   }
 
   function clickTile(event) {
@@ -131,6 +148,7 @@ function placeFlag(event) {
       placeFlag.call(this, event);
     } else {
       if (gameOver || this.classList.contains("tile-clicked")) {
+        
         return;
       }
 
@@ -140,6 +158,9 @@ function placeFlag(event) {
         if (minesLocation.includes(tile.id)) {
           gameOver = true;
           revealMines();
+          let gif = document.getElementsByClassName("gameOver")[0];
+          console.log(gif);
+          setTimeout(() => gif.style.display = "flex", 1000);
           return;
         }
 
