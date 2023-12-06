@@ -3,9 +3,9 @@
 # Keboard code generation!
 
 ## reload page
-page reloading is executed using a function made which invokes `loaction.reload()`` function which reloads the webpage.
+page reloading is executed using a function made which invokes `loaction.reload()` function which reloads the webpage.
 <br>
-This function is then simply called on a reload button using `Onclick` function/attribute in the button element HTML code.
+This function is then simply called on a reload button using ` Onclick ` function/attribute in the button element HTML code.
 
 
 ### JavaScript Statement Explanation
