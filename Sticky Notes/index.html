@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📖 Sticky Notes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+  <body>
+    <div class="left-container">
+      <div class="box1">
+        <textarea
+          name="inputArea"
+          id="textArea"
+          cols="65"
+          rows="15"
+          placeholder="//write a note here"
+        ></textarea>
+        <button id="addNoteBtn" class="addNoteBtn bn632-hover bn27">Add Note</button>
+      </div>
+      <div >
+        <input  id="colorPicker" type="color" />
+      </div>
+    </div>
+    <div class="right-container">
+        <h1 id="heading-note">Your Notes</h1>
+        <div id="notesContainer" class="notes-container"></div>
+        <!-- <span class="notesNotAdded">
+            <p>
+                You have not added a note yet.</p>
+        </span> -->
+    </div>
+    <script src="script.js" defer></script>
+  </body>
+</html>
